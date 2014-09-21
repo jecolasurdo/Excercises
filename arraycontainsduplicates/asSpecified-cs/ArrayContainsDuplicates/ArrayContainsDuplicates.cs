@@ -28,6 +28,11 @@ namespace Katas
                return true;
             }
 
+            if (input.Count() == 0)
+            {
+                return true;
+            }
+
             throw new NotImplementedException();
 
         }
