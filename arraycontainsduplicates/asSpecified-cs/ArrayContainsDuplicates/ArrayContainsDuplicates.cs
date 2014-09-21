@@ -33,7 +33,7 @@ namespace Katas
                 return true;
             }
 
-            throw new NotImplementedException();
+            return input.Distinct().Count() != input.Count();
 
         }
     }
