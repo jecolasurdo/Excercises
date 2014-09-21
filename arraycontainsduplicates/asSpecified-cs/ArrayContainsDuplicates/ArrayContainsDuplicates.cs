@@ -15,7 +15,9 @@ namespace Katas
         /// An integer array to determine the duplicates of.
         /// </param>
         /// <remarks>
-        /// Algorithmic Complexity:
+        /// Algorithmic Complexity: O(n)
+        /// This is based on Distinct's use of hashing and the integer type's default equality comparer.
+        /// Each Count method is O(1), which is negligible to the overall result.
         /// </remarks>
         /// <returns>
         /// Returns true if the integer array contains duplicates.
