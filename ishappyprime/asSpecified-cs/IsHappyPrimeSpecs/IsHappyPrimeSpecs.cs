@@ -9,6 +9,20 @@ namespace Katas
     [TestFixture]
     public class IsHappyPrimeSpecs
     {
+        [TestCase]
+        public void IsHappyPrime_GivenHappyPrimes_ReturnsTrue()
+        {
+            Assert.Inconclusive();
+        }
 
+        [TestCase]
+        public void IsHappyPrime_GivenNonPrimes_ReturnsFalseWithNoFurtherProcessing() {
+            Assert.Inconclusive();
+        }
+
+        [TestCase]
+        public void IsHappyPrime_GivenNonHappyPrimes_ReturnsFalse() {
+            Assert.Inconclusive();
+        }
     }
 }
