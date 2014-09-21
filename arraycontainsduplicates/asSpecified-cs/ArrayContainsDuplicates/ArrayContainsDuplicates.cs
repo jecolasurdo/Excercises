@@ -23,14 +23,13 @@ namespace Katas
         /// </returns>
         public bool ContainsDuplicates(int[] input)
         {
-            if (input != null)
+            if (input == null)
             {
-                throw new NotImplementedException();
+               return true;
             }
-            else
-            {
-                return true;
-            }
+
+            throw new NotImplementedException();
+
         }
     }
 }
