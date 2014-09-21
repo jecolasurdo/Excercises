@@ -21,9 +21,12 @@ namespace Katas
         }
 
         [Test]
-        public void ArrayContainsDuplicates_ArrayIsEmpty_ReturnsFalse()
-        {
-            Assert.Inconclusive();
+        public void ArrayContainsDuplicates_ArrayIsEmpty_ReturnsFalse() {
+            var anEmptyIntArray = new int[] {};
+            var acd = new Katas.ArrayContainsDuplicates();
+            var actualResult = acd.ContainsDuplicates(anEmptyIntArray);
+            var expectedResult = true;
+            Assert.AreEqual(expectedResult, actualResult);
         }
 
         [Test]
