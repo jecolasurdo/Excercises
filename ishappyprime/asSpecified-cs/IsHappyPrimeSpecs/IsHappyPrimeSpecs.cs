@@ -24,5 +24,16 @@ namespace Katas
         public void IsHappyPrime_GivenNonHappyPrimes_ReturnsFalse() {
             Assert.Inconclusive();
         }
+
+        [TestCase]
+        public void IsPrime_GivenAPrime_ReturnsTrue() {
+            Assert.Inconclusive();
+        }
+
+        [TestCase]
+        public void IsPrime_GivenNonPrime_ReturnsFalse() {
+            Assert.Inconclusive();
+        }
+
     }
 }
