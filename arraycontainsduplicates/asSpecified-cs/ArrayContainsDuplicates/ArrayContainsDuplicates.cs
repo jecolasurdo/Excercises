@@ -23,7 +23,7 @@ namespace Katas
         /// </returns>
         public bool ContainsDuplicates(int[] input)
         {
-            throw new InvalidOperationException();
+            throw new NotImplementedException();
         }
     }
 }

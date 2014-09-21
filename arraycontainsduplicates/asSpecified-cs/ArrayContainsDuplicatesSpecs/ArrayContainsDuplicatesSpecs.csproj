@@ -7,8 +7,8 @@
     <ProjectGuid>{7CA9B563-F0BC-447F-B50D-D17C5A97E16D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ArrayContainsDuplicates</RootNamespace>
-    <AssemblyName>ArrayContainsDuplicates</AssemblyName>
+    <RootNamespace>Katas</RootNamespace>
+    <AssemblyName>ArrayContainsDuplicatesSpecs</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
