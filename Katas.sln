@@ -31,7 +31,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "isHappyPrime", "isHappyPrim
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "asSpecified-cs", "asSpecified-cs", "{39813FE8-C60F-48A9-8949-A71BD10BCBEE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IsHappyPrimeSpecs", "ishappyprime\asSpecified-cs\IsHappyPrimeSpecs\IsHappyPrimeSpecs.csproj", "{4122F025-5E4D-4B9B-A418-DB64FC9E306C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HappyPrimeSpecs", "ishappyprime\asSpecified-cs\IsHappyPrimeSpecs\HappyPrimeSpecs.csproj", "{4122F025-5E4D-4B9B-A418-DB64FC9E306C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IsHappyPrime", "ishappyprime\asSpecified-cs\IsHappyPrime\IsHappyPrime.csproj", "{1EE2B94A-2B1A-44DA-AE21-CEF2DACBD10D}"
 EndProject
