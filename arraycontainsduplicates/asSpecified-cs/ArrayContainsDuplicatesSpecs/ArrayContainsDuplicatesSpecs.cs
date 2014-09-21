@@ -29,7 +29,10 @@ namespace Katas
         [Test]
         public void ArrayontainsDuplicates_ArrayIsNull_ReturnsFalse()
         {
-            Assert.Inconclusive();
+            var acd = new Katas.ArrayContainsDuplicates();
+            var actualResult = acd.ContainsDuplicates(null);
+            var expectedResult = true;
+            Assert.AreEqual(expectedResult, actualResult);
         }
     }
 }
