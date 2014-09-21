@@ -19,7 +19,25 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "fullyImperative-js", "fully
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "setBasedDeclarative-tsql", "setBasedDeclarative-tsql", "{97D01D73-CD50-4F9E-A0F6-8EAE5897EAFE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArrayContainsDuplicatesSpecs", "arraycontainsduplicates\asSpecified-cs\ArrayContainsDuplicatesSpecs\ArrayContainsDuplicatesSpecs.csproj", "{7CA9B563-F0BC-447F-B50D-D17C5A97E16D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArrayContainsDuplicates", "arraycontainsduplicates\asSpecified-cs\ArrayContainsDuplicates\ArrayContainsDuplicates.csproj", "{0F86F3EA-F498-4025-AFC6-25648D482F1E}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7CA9B563-F0BC-447F-B50D-D17C5A97E16D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CA9B563-F0BC-447F-B50D-D17C5A97E16D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CA9B563-F0BC-447F-B50D-D17C5A97E16D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CA9B563-F0BC-447F-B50D-D17C5A97E16D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F86F3EA-F498-4025-AFC6-25648D482F1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F86F3EA-F498-4025-AFC6-25648D482F1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F86F3EA-F498-4025-AFC6-25648D482F1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F86F3EA-F498-4025-AFC6-25648D482F1E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
@@ -29,5 +47,7 @@ Global
 		{938EEC47-B7CA-4F2B-8B29-A8293B79E29B} = {136DBEBD-7EFA-4070-8B6D-50FC9C160742}
 		{18359E6E-8116-4ED7-B141-E5FF68EB14C8} = {136DBEBD-7EFA-4070-8B6D-50FC9C160742}
 		{97D01D73-CD50-4F9E-A0F6-8EAE5897EAFE} = {136DBEBD-7EFA-4070-8B6D-50FC9C160742}
+		{7CA9B563-F0BC-447F-B50D-D17C5A97E16D} = {1D0B06CC-15B1-4C0C-9BD5-CBB78E2D44A5}
+		{0F86F3EA-F498-4025-AFC6-25648D482F1E} = {1D0B06CC-15B1-4C0C-9BD5-CBB78E2D44A5}
 	EndGlobalSection
 EndGlobal
