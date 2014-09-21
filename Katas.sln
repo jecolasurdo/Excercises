@@ -3,8 +3,31 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "arraycontainsduplicates", "arraycontainsduplicates", "{136DBEBD-7EFA-4070-8B6D-50FC9C160742}"
+	ProjectSection(SolutionItems) = preProject
+		..\technicalscreen\technicalscreen\src\main\java\com\ats\technicalscreen\arraycontainsduplicates\ArrayContainsDuplicates.java = ..\technicalscreen\technicalscreen\src\main\java\com\ats\technicalscreen\arraycontainsduplicates\ArrayContainsDuplicates.java
+		..\technicalscreen\technicalscreen\src\test\java\com\ats\technicalscreen\arraycontainsduplicates\ArrayContainsDuplicatesTest.java = ..\technicalscreen\technicalscreen\src\test\java\com\ats\technicalscreen\arraycontainsduplicates\ArrayContainsDuplicatesTest.java
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "asSpecified-cs", "asSpecified-cs", "{1D0B06CC-15B1-4C0C-9BD5-CBB78E2D44A5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "objectoriented-cs", "objectoriented-cs", "{0AE522B3-E34F-4D49-B9CB-E6EC0CE3FA68}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "functional-fs", "functional-fs", "{938EEC47-B7CA-4F2B-8B29-A8293B79E29B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "fullyImperative-js", "fullyImperative-js", "{18359E6E-8116-4ED7-B141-E5FF68EB14C8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "setBasedDeclarative-tsql", "setBasedDeclarative-tsql", "{97D01D73-CD50-4F9E-A0F6-8EAE5897EAFE}"
+EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1D0B06CC-15B1-4C0C-9BD5-CBB78E2D44A5} = {136DBEBD-7EFA-4070-8B6D-50FC9C160742}
+		{0AE522B3-E34F-4D49-B9CB-E6EC0CE3FA68} = {136DBEBD-7EFA-4070-8B6D-50FC9C160742}
+		{938EEC47-B7CA-4F2B-8B29-A8293B79E29B} = {136DBEBD-7EFA-4070-8B6D-50FC9C160742}
+		{18359E6E-8116-4ED7-B141-E5FF68EB14C8} = {136DBEBD-7EFA-4070-8B6D-50FC9C160742}
+		{97D01D73-CD50-4F9E-A0F6-8EAE5897EAFE} = {136DBEBD-7EFA-4070-8B6D-50FC9C160742}
 	EndGlobalSection
 EndGlobal
