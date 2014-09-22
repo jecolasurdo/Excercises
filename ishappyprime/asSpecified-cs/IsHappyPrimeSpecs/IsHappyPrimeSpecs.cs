@@ -48,8 +48,14 @@ namespace Katas
             Assert.Inconclusive();
         }
 
+        [TestCase]
+        public void IsHappyPrime_GivenNonHappyPrimes_ReturnsFalse() {
+            Assert.Inconclusive();
+        }
+
         [Test]
-        public void IsHappyPrime_GivenNonPrimes_ReturnsFalse() {
+        public void IsHappyPrime_GivenNonPrimes_ReturnsFalse()
+        {
             var primeFaker = Substitute.For<IHappyPrimes>();
             var anyValue = 0;
             primeFaker.IsPrime(anyValue).ReturnsForAnyArgs(false);
@@ -57,12 +63,7 @@ namespace Katas
             var anyNonPrimeNumber = 4;
             var actualResult = hp.IsHappyPrime(anyNonPrimeNumber);
             var expectedResult = false;
-            Assert.AreEqual(expectedResult,actualResult);
-        }
-
-        [TestCase]
-        public void IsHappyPrime_GivenNonHappyPrimes_ReturnsFalse() {
-            Assert.Inconclusive();
+            Assert.AreEqual(expectedResult, actualResult);
         }
 
         [Test, TestCaseSource("Primes")]

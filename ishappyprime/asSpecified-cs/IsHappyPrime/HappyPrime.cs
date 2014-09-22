@@ -104,8 +104,11 @@ namespace Katas
         /// Returns false if the supplied integer is not happy.
         /// </returns>
 	    public bool IsHappyPrime(int input) {
-            //TODO: Use isprimefunction property rather than direct call to the internal IsPrime function.
-		    throw new NotImplementedException();
-	    }
+            if (IsPrimeFunction(input) == false)
+            {
+                return false;
+            }
+            throw new NotImplementedException();
+        }
     }
 }
