@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Katas
 {
@@ -76,35 +77,69 @@ namespace Katas
                 return false;
             }
             
-            var product = 0.0;
-            const double epsilon = 0.000001;
+            var product = 0;
             while (true)
             {
-                char[] digitArray = null;
-                if (Math.Abs(product) < epsilon)
+                int[] digitArray;
+                if (product == 0)
                 {
-                    digitArray = string.Format("{0}", input).ToCharArray();
+                    digitArray = ToDigitArray(input);
                 }
                 else
                 {
-                    digitArray = string.Format("{0}", product).ToCharArray();
+                    digitArray = ToDigitArray(product);
                     product = 0;
                 }
                 
                 foreach (var digit in digitArray)
                 {
-                    var i = double.Parse(digit.ToString());
-                    product = product + (Math.Pow(i,2));
+                    product = product + (int)(Math.Pow(digit,2));
                 }
-                if (Math.Abs(product - 1.0) < epsilon)
+                if (product == 1)
                 {
                     return true;
                 }
-                if (Math.Abs(product - 4.0) < epsilon)
+
+                if (product == 4)
                 {
                     return false;
                 }                
             }
         }
+
+        /// <summary>
+        /// Converts an integer into an array of digits.
+        /// </summary>
+        /// <param name="n">
+        /// The integer to convert to an array.
+        /// </param>
+        /// <returns>
+        /// Returns an array of digits.
+        /// </returns>
+        /// <remarks>
+        /// Throws an exception if a negative integer is passed in.
+        /// This is an implementation of an idea found at:
+        ///     http://stackoverflow.com/questions/4580261/integer-to-integer-array-c-sharp
+        /// </remarks>
+        public int[] ToDigitArray(int n) {
+            if (n < 0)
+            {
+                throw new NotImplementedException("This method is currently only implemented for integers greater than or equal to zero.");
+            }
+
+            if (n == 0)
+            {
+                return new int[1] { 0 };
+            }
+            var digits = new List<int>();
+            for (; n != 0; n /= 10)
+            {
+                digits.Add(n % 10);
+            }
+            var arr = digits.ToArray();
+            Array.Reverse(arr);
+            return arr;
+        }
+
     }
 }

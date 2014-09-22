@@ -126,5 +126,21 @@ namespace Katas
             var expectedResult = false;
             Assert.AreEqual(expectedResult, actualResult);
         }
+
+        [Test]
+        public void ToDigitArray_Normally_ReturnsCorrectArray() {
+            var hp = new HappyPrimes();
+            var actualResult = hp.ToDigitArray(234);
+            var expectedResult = new int[] {2, 3, 4};
+            Assert.AreEqual(expectedResult,actualResult);
+        }
+
+        [Test]
+        public void ToDigitArray_WhenPassedANegative_ThrowsAnException() {
+            var hp = new HappyPrimes();
+            var aNegativeInteger = -1234;
+            Assert.Throws<NotImplementedException>(() => hp.ToDigitArray(aNegativeInteger));
+        }
+
     }
 }
