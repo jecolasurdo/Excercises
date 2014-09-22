@@ -52,7 +52,7 @@ namespace Katas
         /// Returns false if the supplied value is not prime.
         /// </returns>
         /// <remarks>
-        /// Zero can be neither prime nor composite.
+        /// Zero and one can be neither prime nor composite.
         ///   Since the excercize requires a boolean be returned, the function throws an exception in this case.
         ///   An alternative would be to have a tristate result - an enumm, or some other safe representation.
         /// A number of improvements can be made to this algorythm, but, since
@@ -60,9 +60,14 @@ namespace Katas
         ///   in short order, this is probably good enough for now. (worst case scenario = 23k comparisons)
         /// </remarks>
         public bool IsPrime(int input) {
-            if (input == 0)
+            if (input == 0 || input == 1)
             {
-                throw new ArithmeticException("Zero is neither prime nor composite. This function cannot be used in this case.");
+                throw new ArithmeticException("Zero and one are neither prime nor composite. This function cannot be used in this case.");
+            }
+
+            if (input < 0)
+            {
+                return false;
             }
 
             if (input == 2)

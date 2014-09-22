@@ -25,6 +25,9 @@ namespace Katas
             Assert.Inconclusive();
         }
 
+        /// <summary>
+        /// Test primes are mercennes along with max 32bit prime.
+        /// </summary>
         private static readonly int[] Primes =
         {
             2,
@@ -38,16 +41,20 @@ namespace Katas
             2147483629
         };
 
+        /// <summary>
+        /// Test nonprimes include negatives, random composites, and large 32bit negative non-prime.
+        /// Zero and One are special and should be handled in a separate specification.
+        /// </summary>
         private static readonly int[] NonPrimes =
         {
             -1,
             -3,
-            1,
             4,
             8,
             32,
             75,
-            88
+            88,
+            2147483627
         };
 
         [Test, TestCaseSource("Primes")]
@@ -66,10 +73,11 @@ namespace Katas
             Assert.AreEqual(expectedResult, actualResult);
         }
 
-        [Test]
-        public void IsPrime_GivenZero_ThrowsException() {
+        [TestCase(0)]
+        [TestCase(1)]
+        public void IsPrime_GivenInvalidNonComposite_ThrowsException(int invalidNonComposite) {
             var hp = new HappyPrimes();
-            Assert.Throws<ArithmeticException>(() => hp.IsPrime(0));
+            Assert.Throws<ArithmeticException>(() => hp.IsPrime(invalidNonComposite));
         }
     }
 }
