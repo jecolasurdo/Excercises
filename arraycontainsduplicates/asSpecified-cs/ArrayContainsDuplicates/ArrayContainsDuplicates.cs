@@ -24,12 +24,12 @@ namespace Katas
         {
             if (input == null)
             {
-               return true;
+               return false;
             }
 
             if (input.Count() == 0)
             {
-                return true;
+                return false;
             }
 
             return input.Distinct().Count() != input.Count();
