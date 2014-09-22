@@ -108,7 +108,36 @@ namespace Katas
             {
                 return false;
             }
-            throw new NotImplementedException();
+            
+            var product = 0.0;
+            const double epsilon = 0.000001;
+            while (true)
+            {
+                char[] digitArray = null;
+                if (Math.Abs(product) < epsilon)
+                {
+                    digitArray = string.Format("{0}", input).ToCharArray();
+                }
+                else
+                {
+                    digitArray = string.Format("{0}", product).ToCharArray();
+                    product = 0;
+                }
+                
+                foreach (var digit in digitArray)
+                {
+                    var i = double.Parse(digit.ToString());
+                    product = product + (Math.Pow(i,2));
+                }
+                if (Math.Abs(product - 1.0) < epsilon)
+                {
+                    return true;
+                }
+                if (Math.Abs(product - 4.0) < epsilon)
+                {
+                    return false;
+                }                
+            }
         }
     }
 }

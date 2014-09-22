@@ -43,9 +43,28 @@ namespace Katas
             2147483627
         };
 
-        [TestCase]
-        public void IsHappyPrime_GivenHappyPrimes_ReturnsTrue() {
+        private static readonly int[] HappyPrimes =
+        {
+            7,
+            13,
+            19,
+            23,
+            397,
+            409,
+            487
+        };
+
+        [Test (Description = "Validate independant of the prime cherker that the happy number checker works.")]
+        public void IsHappyPrime_GivenHappyNumberWithPrimeCheckerOverridden_ReturnsTrue() {
             Assert.Inconclusive();
+        }
+
+        [Test, TestCaseSource("HappyPrimes")]
+        public void IsHappyPrime_GivenHappyPrimes_ReturnsTrue(int happyPrime) {
+            var hp = new HappyPrimes();
+            var actualResult = hp.IsHappyPrime(happyPrime);
+            var expectedResult = true;
+            Assert.AreEqual(expectedResult, actualResult);
         }
 
         [TestCase]
