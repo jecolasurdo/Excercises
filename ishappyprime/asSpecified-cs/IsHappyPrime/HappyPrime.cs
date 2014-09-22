@@ -8,7 +8,7 @@ namespace Katas
     /// <remarks>
     /// I've renamed this class from IsHappyPrime to HappyPrimes to be a bit more idiomatic.
     /// </remarks>>
-    public class HappyPrimes
+    public class HappyPrimes : IHappyPrimes
     {
         public delegate bool IsPrimeDelegate(int value);
 

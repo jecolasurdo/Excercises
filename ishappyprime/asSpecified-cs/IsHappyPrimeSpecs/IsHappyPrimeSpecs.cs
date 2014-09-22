@@ -47,9 +47,9 @@ namespace Katas
             Assert.Inconclusive();
         }
 
-        [TestCase]
-        public void IsHappyPrime_GivenNonPrimes_ReturnsFalseWithNoFurtherProcessing() {
-            Assert.Inconclusive();
+        [Test, TestCaseSource("NonPrimes")]
+        public void IsHappyPrime_GivenNonPrimes_ReturnsFalseWithNoFurtherProcessing(int notAPrimeNumber) {
+            
         }
 
         [TestCase]
