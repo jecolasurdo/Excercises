@@ -1,4 +1,6 @@
-﻿using System.Linq;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Katas
 {
@@ -11,20 +13,18 @@ namespace Katas
         /// <param name="input">
         /// An integer array to determine the duplicates of.
         /// </param>
-        /// <remarks>
-        /// Algorithmic Complexity: O(n)
-        /// This is based on Distinct's use of hashing and the integer type's default equality comparer. O(n) is likely a worst case.
-        /// Each Count method is O(1), which is negligible to the overall result.
-        /// </remarks>
         /// <returns>
         /// Returns true if the integer array contains duplicates.
         /// Returns false if the integer array does not contain duplicates.
         /// </returns>
-        public bool ContainsDuplicates(int[] input)
-        {
+        /// <remarks>
+        /// Here I'm using a hashset object, which should be permissible as a similar object exists in java.util (as allowed in instructions)
+        /// Algorithmic Complexity: O(1) - hashsets provide hashtable backing for very fast lookup, and allow for very efficient add performance.
+        /// </remarks> 
+        public bool ContainsDuplicates(int[] input) {
             if (input == null)
             {
-               return false;
+                return false;
             }
 
             if (input.Count() == 0)
@@ -32,8 +32,16 @@ namespace Katas
                 return false;
             }
 
-            return input.Distinct().Count() != input.Count();
-
+            var hs = new HashSet<int>();
+            foreach (var i in input)
+            {
+                if (hs.Contains(i))
+                {
+                    return true;
+                }
+                hs.Add(i);
+            }
+            return false;
         }
     }
 }
