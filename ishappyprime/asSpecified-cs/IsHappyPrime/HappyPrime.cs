@@ -53,8 +53,11 @@ namespace Katas
         /// </returns>
         /// <remarks>
         /// Zero can be neither prime nor composite.
-        /// Since the excercize requires a boolean be returned, the function throws an exception in this case.
-        /// An alternative would be to have a tristate result - an enumm, or some other safe representation.
+        ///   Since the excercize requires a boolean be returned, the function throws an exception in this case.
+        ///   An alternative would be to have a tristate result - an enumm, or some other safe representation.
+        /// A number of improvements can be made to this algorythm, but, since
+        ///   it is already capabable of calculating the largest prime smaller than Int32.MaxValue 
+        ///   in short order, this is probably good enough for now. (worst case scenario = 23k comparisons)
         /// </remarks>
         public bool IsPrime(int input) {
             if (input == 1 ||
@@ -62,14 +65,14 @@ namespace Katas
             {
                 return true;
             }
-            if (input%2 == 0) //Eliminate evens
+            if (input%2 == 0)
             {
                 return false;
             }
             var i = 3;
-            while (i <= Math.Sqrt(Int32.MaxValue) && i < input) //Eliminate duplicate divisors
+            while (i <= Math.Sqrt(Int32.MaxValue) && i < input)
             {
-                if (input%i == 0) //Check if the input is divisible by the current int
+                if (input%i == 0)
                 {
                     return false;
                 }
