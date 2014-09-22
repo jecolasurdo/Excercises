@@ -10,7 +10,7 @@ namespace Katas
     /// </remarks>>
     public class HappyPrimes
     {
-        public delegate bool IsPrimeDelegate(int value);
+        public delegate bool IsPrimeDelegate(Int64 value);
 
         /// <summary>
         /// A delegate that takes an int and returns a boolean stating whether or not 
@@ -51,7 +51,7 @@ namespace Katas
         /// Returns true if the supplied value is prime.
         /// Returns false if the supplied value is not prime.
         /// </returns>
-        public bool IsPrime(int input) {
+        public bool IsPrime(Int64 input) {
             throw new NotImplementedException();
         }
 
@@ -66,7 +66,7 @@ namespace Katas
         /// Returns true if the supplied integer is happy.
         /// Returns false if the supplied integer is not happy.
         /// </returns>
-	    public bool IsHappyPrime(int input) {
+	    public bool IsHappyPrime(Int64 input) {
             //TODO: Use isprimefunction property rather than direct call to the internal IsPrime function.
 		    throw new NotImplementedException();
 	    }
