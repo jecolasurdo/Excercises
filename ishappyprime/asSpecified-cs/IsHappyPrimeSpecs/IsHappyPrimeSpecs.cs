@@ -1,6 +1,5 @@
 ﻿using System;
 using NUnit.Framework;
-using NSubstitute;
 
 namespace Katas
 {
@@ -77,17 +76,30 @@ namespace Katas
             338
         };
 
-        [Test (Description = "Validate independant of the prime cherker that the happy number checker works.")]
-        [TestCaseSource ("HappyNumbers")]
-        public void IsHappyPrime_GivenHappyNumberWithPrimeCheckerOverridden_ReturnsTrue(int happyNumber) {
-            var primeFaker = Substitute.For<IHappyPrimes>();
-            var anyValue = 0;
-            primeFaker.IsPrime(anyValue).ReturnsForAnyArgs(true);
-            var hp = new HappyPrimes(primeFaker.IsPrime);
-            var actualResult = hp.IsHappyPrime(happyNumber);
+        [Test, TestCaseSource("Primes")]
+        public void IsPrime_GivenAPrime_ReturnsTrue(int aPrimeNumber)
+        {
+            var hp = new HappyPrimes();
+            var actualResult = hp.IsPrime(aPrimeNumber);
             var expectedResult = true;
-            Assert.AreEqual(expectedResult,actualResult);
+            Assert.AreEqual(expectedResult, actualResult);
+        }
 
+        [Test, TestCaseSource("NonPrimes")]
+        public void IsPrime_GivenNonPrime_ReturnsFalse(int notAPrimeNumber)
+        {
+            var hp = new HappyPrimes();
+            var actualResult = hp.IsPrime(notAPrimeNumber);
+            var expectedResult = false;
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+
+        [TestCase(0)]
+        [TestCase(1)]
+        public void IsPrime_GivenInvalidNonComposite_ThrowsException(int invalidNonComposite)
+        {
+            var hp = new HappyPrimes();
+            Assert.Throws<ArithmeticException>(() => hp.IsPrime(invalidNonComposite));
         }
 
         [Test, TestCaseSource("HappyPrimes")]
@@ -106,40 +118,13 @@ namespace Katas
             Assert.AreEqual(expectedResult, actualResult);
         }
 
-        [Test]
-        public void IsHappyPrime_GivenNonPrimes_ReturnsFalse()
+        [Test, TestCaseSource("NonPrimes")]
+        public void IsHappyPrime_GivenNonPrimes_ReturnsFalse(int notAPrimeNumber)
         {
-            var primeFaker = Substitute.For<IHappyPrimes>();
-            var anyValue = 0;
-            primeFaker.IsPrime(anyValue).ReturnsForAnyArgs(false);
-            var hp = new HappyPrimes(primeFaker.IsPrime);
-            var anyNonPrimeNumber = 4;
-            var actualResult = hp.IsHappyPrime(anyNonPrimeNumber);
+            var hp = new HappyPrimes();
+            var actualResult = hp.IsHappyPrime(notAPrimeNumber);
             var expectedResult = false;
             Assert.AreEqual(expectedResult, actualResult);
-        }
-
-        [Test, TestCaseSource("Primes")]
-        public void IsPrime_GivenAPrime_ReturnsTrue(int aPrimeNumber) {
-            var hp = new HappyPrimes();
-            var actualResult = hp.IsPrime(aPrimeNumber);
-            var expectedResult = true;
-            Assert.AreEqual(expectedResult,actualResult);
-        }
-
-        [Test, TestCaseSource("NonPrimes")] 
-        public void IsPrime_GivenNonPrime_ReturnsFalse(int notAPrimeNumber) {
-            var hp = new HappyPrimes();
-            var actualResult = hp.IsPrime(notAPrimeNumber);
-            var expectedResult = false;
-            Assert.AreEqual(expectedResult, actualResult);
-        }
-
-        [TestCase(0)]
-        [TestCase(1)]
-        public void IsPrime_GivenInvalidNonComposite_ThrowsException(int invalidNonComposite) {
-            var hp = new HappyPrimes();
-            Assert.Throws<ArithmeticException>(() => hp.IsPrime(invalidNonComposite));
         }
     }
 }
