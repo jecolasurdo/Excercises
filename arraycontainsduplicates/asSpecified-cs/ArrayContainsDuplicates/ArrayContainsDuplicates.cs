@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Linq;
 
 namespace Katas
 {
@@ -16,7 +13,7 @@ namespace Katas
         /// </param>
         /// <remarks>
         /// Algorithmic Complexity: O(n)
-        /// This is based on Distinct's use of hashing and the integer type's default equality comparer.
+        /// This is based on Distinct's use of hashing and the integer type's default equality comparer. O(n) is likely a worst case.
         /// Each Count method is O(1), which is negligible to the overall result.
         /// </remarks>
         /// <returns>
