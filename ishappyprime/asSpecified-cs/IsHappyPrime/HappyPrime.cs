@@ -65,8 +65,7 @@ namespace Katas
                 throw new ArithmeticException("Zero is neither prime nor composite. This function cannot be used in this case.");
             }
 
-            if (input == 1 ||
-                input == 2)
+            if (input == 2)
             {
                 return true;
             }
