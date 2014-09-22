@@ -70,9 +70,28 @@ namespace Katas
             389
         };
 
+        /// <summary>
+        /// Happy numbers (not just primes) from OEIS
+        /// </summary>
+        private static readonly int[] HappyNumbers =
+        {
+            28,
+            188,
+            193,
+            338
+        };
+
         [Test (Description = "Validate independant of the prime cherker that the happy number checker works.")]
-        public void IsHappyPrime_GivenHappyNumberWithPrimeCheckerOverridden_ReturnsTrue() {
-            Assert.Inconclusive();
+        [TestCaseSource ("HappyNumbers")]
+        public void IsHappyPrime_GivenHappyNumberWithPrimeCheckerOverridden_ReturnsTrue(int happyNumber) {
+            var primeFaker = Substitute.For<IHappyPrimes>();
+            var anyValue = 0;
+            primeFaker.IsPrime(anyValue).ReturnsForAnyArgs(true);
+            var hp = new HappyPrimes(primeFaker.IsPrime);
+            var actualResult = hp.IsHappyPrime(happyNumber);
+            var expectedResult = true;
+            Assert.AreEqual(expectedResult,actualResult);
+
         }
 
         [Test, TestCaseSource("HappyPrimes")]
