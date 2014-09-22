@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using NUnit.Framework;
+using NSubstitute;
 
 namespace Katas
 {
@@ -47,9 +48,16 @@ namespace Katas
             Assert.Inconclusive();
         }
 
-        [Test, TestCaseSource("NonPrimes")]
-        public void IsHappyPrime_GivenNonPrimes_ReturnsFalseWithNoFurtherProcessing(int notAPrimeNumber) {
-            
+        [Test]
+        public void IsHappyPrime_GivenNonPrimes_ReturnsFalse() {
+            var primeFaker = Substitute.For<IHappyPrimes>();
+            var anyValue = 0;
+            primeFaker.IsPrime(anyValue).ReturnsForAnyArgs(false);
+            var hp = new HappyPrimes(primeFaker.IsPrime);
+            var anyNonPrimeNumber = 4;
+            var actualResult = hp.IsHappyPrime(anyNonPrimeNumber);
+            var expectedResult = false;
+            Assert.AreEqual(expectedResult,actualResult);
         }
 
         [TestCase]
