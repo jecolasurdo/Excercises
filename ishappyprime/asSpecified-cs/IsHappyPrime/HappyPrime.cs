@@ -60,15 +60,22 @@ namespace Katas
         ///   in short order, this is probably good enough for now. (worst case scenario = 23k comparisons)
         /// </remarks>
         public bool IsPrime(int input) {
+            if (input == 0)
+            {
+                throw new ArithmeticException("Zero is neither prime nor composite. This function cannot be used in this case.");
+            }
+
             if (input == 1 ||
                 input == 2)
             {
                 return true;
             }
+
             if (input%2 == 0)
             {
                 return false;
             }
+
             var i = 3;
             while (i <= Math.Sqrt(Int32.MaxValue) && i < input)
             {
