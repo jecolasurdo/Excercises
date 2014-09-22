@@ -55,8 +55,8 @@ namespace Katas
 
         [Test]
         public void IsPrime_GivenZero_ThrowsException() {
-            Assert.Inconclusive();
+            var hp = new HappyPrimes();
+            Assert.Throws<ArithmeticException>(() => hp.IsPrime(0));
         }
-
     }
 }
