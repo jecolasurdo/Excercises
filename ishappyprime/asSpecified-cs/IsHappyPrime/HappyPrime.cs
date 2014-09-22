@@ -10,7 +10,7 @@ namespace Katas
     /// </remarks>>
     public class HappyPrimes
     {
-        public delegate bool IsPrimeDelegate(Int64 value);
+        public delegate bool IsPrimeDelegate(int value);
 
         /// <summary>
         /// A delegate that takes an int and returns a boolean stating whether or not 
@@ -51,8 +51,31 @@ namespace Katas
         /// Returns true if the supplied value is prime.
         /// Returns false if the supplied value is not prime.
         /// </returns>
-        public bool IsPrime(Int64 input) {
-            throw new NotImplementedException();
+        /// <remarks>
+        /// Zero can be neither prime nor composite.
+        /// Since the excercize requires a boolean be returned, the function throws an exception in this case.
+        /// An alternative would be to have a tristate result - an enumm, or some other safe representation.
+        /// </remarks>
+        public bool IsPrime(int input) {
+            if (input == 1 ||
+                input == 2)
+            {
+                return true;
+            }
+            if (input%2 == 0) //Eliminate evens
+            {
+                return false;
+            }
+            var i = 3;
+            while (i <= Math.Sqrt(Int32.MaxValue) && i < input) //Eliminate duplicate divisors
+            {
+                if (input%i == 0) //Check if the input is divisible by the current int
+                {
+                    return false;
+                }
+                i = i + 2;
+            }
+            return true;
         }
 
         /// <summary>
@@ -66,7 +89,7 @@ namespace Katas
         /// Returns true if the supplied integer is happy.
         /// Returns false if the supplied integer is not happy.
         /// </returns>
-	    public bool IsHappyPrime(Int64 input) {
+	    public bool IsHappyPrime(int input) {
             //TODO: Use isprimefunction property rather than direct call to the internal IsPrime function.
 		    throw new NotImplementedException();
 	    }

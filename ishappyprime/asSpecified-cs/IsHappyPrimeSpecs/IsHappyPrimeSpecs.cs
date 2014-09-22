@@ -25,8 +25,10 @@ namespace Katas
             Assert.Inconclusive();
         }
 
-        private static readonly Int64[] Primes =
+        private static readonly int[] Primes =
         {
+            1,
+            2,
             3,
             7,
             31,
@@ -34,19 +36,25 @@ namespace Katas
             8191,
             131071,
             524287,
-            2147483647
+            2147483629
         };
 
         [Test, TestCaseSource("Primes")]
-        public void IsPrime_GivenAPrime_ReturnsTrue(Int64 aPrimeNumber) {
+        public void IsPrime_GivenAPrime_ReturnsTrue(int aPrimeNumber) {
             var hp = new HappyPrimes();
             var actualResult = hp.IsPrime(aPrimeNumber);
             var expectedResult = true;
             Assert.AreEqual(expectedResult,actualResult);
         }
 
-        [TestCase]
+        [TestCase] 
         public void IsPrime_GivenNonPrime_ReturnsFalse() {
+            //TODO: Include negatives in list of non-primes
+            Assert.Inconclusive();
+        }
+
+        [Test]
+        public void IsPrime_GivenZero_ThrowsException() {
             Assert.Inconclusive();
         }
 
