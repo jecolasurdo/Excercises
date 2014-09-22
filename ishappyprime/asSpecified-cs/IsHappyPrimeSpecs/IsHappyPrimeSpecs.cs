@@ -10,21 +10,6 @@ namespace Katas
     [TestFixture]
     public class IsHappyPrimeSpecs
     {
-        [TestCase]
-        public void IsHappyPrime_GivenHappyPrimes_ReturnsTrue() {
-            Assert.Inconclusive();
-        }
-
-        [TestCase]
-        public void IsHappyPrime_GivenNonPrimes_ReturnsFalseWithNoFurtherProcessing() {
-            Assert.Inconclusive();
-        }
-
-        [TestCase]
-        public void IsHappyPrime_GivenNonHappyPrimes_ReturnsFalse() {
-            Assert.Inconclusive();
-        }
-
         /// <summary>
         /// Test primes are mercennes along with max 32bit prime.
         /// </summary>
@@ -56,6 +41,21 @@ namespace Katas
             88,
             2147483627
         };
+
+        [TestCase]
+        public void IsHappyPrime_GivenHappyPrimes_ReturnsTrue() {
+            Assert.Inconclusive();
+        }
+
+        [TestCase]
+        public void IsHappyPrime_GivenNonPrimes_ReturnsFalseWithNoFurtherProcessing() {
+            Assert.Inconclusive();
+        }
+
+        [TestCase]
+        public void IsHappyPrime_GivenNonHappyPrimes_ReturnsFalse() {
+            Assert.Inconclusive();
+        }
 
         [Test, TestCaseSource("Primes")]
         public void IsPrime_GivenAPrime_ReturnsTrue(int aPrimeNumber) {
