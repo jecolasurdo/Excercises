@@ -29,7 +29,7 @@ namespace Katas
             var anEmptyIntArray = new int[] {};
             var acd = new Katas.ArrayContainsDuplicates();
             var actualResult = acd.ContainsDuplicates(anEmptyIntArray);
-            var expectedResult = true;
+            var expectedResult = false;
             Assert.AreEqual(expectedResult, actualResult);
         }
 
@@ -38,7 +38,7 @@ namespace Katas
         {
             var acd = new Katas.ArrayContainsDuplicates();
             var actualResult = acd.ContainsDuplicates(null);
-            var expectedResult = true;
+            var expectedResult = false;
             Assert.AreEqual(expectedResult, actualResult);
         }
     }
