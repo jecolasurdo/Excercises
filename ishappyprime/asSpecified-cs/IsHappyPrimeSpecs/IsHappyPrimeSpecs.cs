@@ -43,6 +43,9 @@ namespace Katas
             2147483627
         };
 
+        /// <summary>
+        /// List of happy primes from OEIS
+        /// </summary>
         private static readonly int[] HappyPrimes =
         {
             7,
@@ -52,6 +55,19 @@ namespace Katas
             397,
             409,
             487
+        };
+
+        /// <summary>
+        /// List of unhappy primes from OEIS
+        /// </summary>
+        private static readonly int[] UnhappyPrimes =
+        {
+            2,
+            3,
+            47,
+            311,
+            347,
+            389
         };
 
         [Test (Description = "Validate independant of the prime cherker that the happy number checker works.")]
@@ -67,9 +83,12 @@ namespace Katas
             Assert.AreEqual(expectedResult, actualResult);
         }
 
-        [TestCase]
-        public void IsHappyPrime_GivenNonHappyPrimes_ReturnsFalse() {
-            Assert.Inconclusive();
+        [Test, TestCaseSource("UnhappyPrimes")]
+        public void IsHappyPrime_GivenNonHappyPrimes_ReturnsFalse(int unhappyPrime) {
+            var hp = new HappyPrimes();
+            var actualResult = hp.IsHappyPrime(unhappyPrime);
+            var expectedResult = false;
+            Assert.AreEqual(expectedResult, actualResult);
         }
 
         [Test]
