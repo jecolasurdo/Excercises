@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace Katas
 {
@@ -37,16 +38,17 @@ namespace Katas
             var trimmedText = textToWrap.TrimStart(' ');
             trimmedText = trimmedText.TrimEnd(' ');
 
-            var splitText = trimmedText.Split(' ');
+            var splitText = Regex.Split(trimmedText,@"(?=(?<=[^\s])\s+)");
 
             var wrappedText = "";
             var currentLineLength = 0;
             foreach (var s in splitText)
             {
-                if (s.Length > columnToWrapAt)
+                currentLineLength += s.Length;
+                if (currentLineLength > columnToWrapAt)
                 {
-                    wrappedText += s + "\n";
-                    continue;
+                    wrappedText += "\n" + s;
+                    currentLineLength = 0;
                 }
                 else
                 {

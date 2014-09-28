@@ -74,7 +74,7 @@ namespace Katas
         [Test]
         public void Wrap_ColumnNumberIsLessThanLengthOfWord_BreaksAtWord() {
             var aColumnNumberLessThanWordLength = 2;
-            var textToWrap = "aaa aaa aaa";
+            var textToWrap = "aaa aaa  aaa";
 
             var expectedResult = "aaa\naaa\naaa";
             var actualResult = Wrapper.Wrap(textToWrap, aColumnNumberLessThanWordLength);
@@ -85,9 +85,9 @@ namespace Katas
         [Test]
         public void Wrap_Normally_BreaksAtWord() {
             var aColumnNumber = 10;
-            var textToWrap = "aaa aaa aaa";
+            var textToWrap = "aaa  aaa  aaa";
 
-            var expectedResult = "aaa aaa\naaa";
+            var expectedResult = "aaa  aaa\naaa";
             var actualResult = Wrapper.Wrap(textToWrap, aColumnNumber);
 
             Assert.AreEqual(expectedResult, actualResult);
