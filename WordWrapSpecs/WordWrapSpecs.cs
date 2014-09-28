@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting;
 using System.Text;
 using NUnit.Framework;
 
@@ -46,6 +47,17 @@ namespace Katas
 
         [Test]
         public void Wrap_TextContainsLeadingSpaces_TruncatesLeadingSpaces() {
+            Assert.Inconclusive();
+        }
+
+        /// <summary>
+        /// Take the following sentance where dashes respresent spaces:
+        ///    This-is-an-----amazing-test.
+        /// This would be interpreted as follows:
+        ///    This-is-an-----amazing/ntest.
+        /// </summary>
+        [Test]
+        public void Wrap_ConsecutiveSpacesMidString_ConsecutiveSpacesAreRespected() {
             Assert.Inconclusive();
         }
 
