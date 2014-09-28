@@ -36,6 +36,17 @@ namespace Katas
             Assert.AreEqual(expectedResult,actualResult);
         }
 
+        [Test]
+        public void Wrap_SuppliedWithTabsOnly_TreatsTabsAsWhiteSpace() {
+            var columnNumber = 10;
+            var aBunchOfTabs = new string('\t', 4);
+
+            var expectedResult = string.Empty;
+            var actualResult = Wrapper.Wrap(aBunchOfTabs, 10);
+
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+
         [TestCase(0)]
         [TestCase(1)]
         [TestCase(10)]
