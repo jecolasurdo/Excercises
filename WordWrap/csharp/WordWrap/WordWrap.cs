@@ -35,7 +35,9 @@ namespace Katas
                 return textToWrap;
             }
 
-            var trimmedText = textToWrap.TrimStart(' ');
+            var textWithExistingNewLineCharsHandled = textToWrap.Replace('\n', ' ');
+
+            var trimmedText = textWithExistingNewLineCharsHandled.TrimStart(' ');
             trimmedText = trimmedText.TrimEnd(' ');
 
             var splitText = Regex.Split(trimmedText,@"(?=(?<=[^\s])\s+)");
