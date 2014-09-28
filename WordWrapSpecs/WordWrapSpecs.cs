@@ -146,7 +146,13 @@ namespace Katas
         /// </summary>
         [Test]
         public void Wrap_MultipleSpaceCharacters_RemainingSpaceCharactersAreTruncated() {
-            Assert.Inconclusive();
+            var columnNumberThatFallsOnASpace = 12;
+            var aStringWithConsecutiveInternalSpaces = "Lorem ipsum     dolor sit amet";
+
+            var expectedResult = "Lorem ipsum\ndolor sit amet";
+            var actualResult = Wrapper.Wrap(aStringWithConsecutiveInternalSpaces, columnNumberThatFallsOnASpace);
+
+            Assert.AreEqual(expectedResult, actualResult);
         }
     }
 }
