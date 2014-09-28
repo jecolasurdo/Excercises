@@ -77,8 +77,14 @@ namespace Katas
         }
 
         [Test]
-        public void Wrap_ColumnNumberGreaterThanTextLength_BreaksAtWord() {
-            Assert.Inconclusive();    
+        public void Wrap_Normally_BreaksAtWord() {
+            var aColumnNumber = 10;
+            var textToWrap = "aaa aaa aaa";
+
+            var expectedResult = "aaa aaa\naaa";
+            var actualResult = Wrapper.Wrap(textToWrap, aColumnNumber);
+
+            Assert.AreEqual(expectedResult, actualResult);
         }
 
         [Test]
