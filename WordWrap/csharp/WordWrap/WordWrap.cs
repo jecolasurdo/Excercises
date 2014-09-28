@@ -23,6 +23,12 @@ namespace Katas
             {
                 throw new ArgumentOutOfRangeException("columnToWrapAt","The wrap column value must be a positive integer.");
             }
+
+            if (columnToWrapAt == 0)
+            {
+                return textToWrap;
+            }
+
             throw new NotImplementedException();
         }
     }

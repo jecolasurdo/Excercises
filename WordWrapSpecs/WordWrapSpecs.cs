@@ -30,7 +30,13 @@ namespace Katas
 
         [Test]
         public void Wrap_ColumnNumberIsZero_ReturnsOriginalTextValue() {
-            Assert.Inconclusive();
+            var zeroColumn = 0;
+            var someStringValue = "Some Text";
+
+            var expectedResult = someStringValue;
+            var actualResult = Wrapper.Wrap(someStringValue, zeroColumn);
+
+            Assert.AreEqual(expectedResult,actualResult);
         }
 
         /// <summary>
