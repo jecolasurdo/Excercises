@@ -4,6 +4,7 @@ using System.Linq;
 using System.Runtime.Remoting;
 using System.Text;
 using NUnit.Framework;
+using Katas;
 
 namespace Katas
 {
@@ -22,7 +23,9 @@ namespace Katas
 
         [Test]
         public void Wrap_ColumnNumberIsNegative_ThrowsArgumentException() {
-            Assert.Inconclusive();
+            var negativeColumnNumber = -1;
+            var unimportantString = "Some Text";
+            Assert.Throws<ArgumentOutOfRangeException>(() => Wrapper.Wrap(unimportantString, negativeColumnNumber));
         }
 
         [Test]

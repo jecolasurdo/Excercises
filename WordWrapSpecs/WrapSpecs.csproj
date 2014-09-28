@@ -45,6 +45,12 @@
     <Compile Include="WordWrapSpecs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WordWrap\csharp\WordWrap\Wrap.csproj">
+      <Project>{bf6718c9-8cf8-4741-a92d-d4c30f76c8f8}</Project>
+      <Name>Wrap</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

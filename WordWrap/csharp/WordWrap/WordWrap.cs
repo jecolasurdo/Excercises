@@ -18,7 +18,11 @@ namespace Katas
         /// <remarks>
         /// 
         /// </remarks>
-        public static string WordWrap(string textToWrap, int columnToWrapAt) {
+        public static string Wrap(string textToWrap, int columnToWrapAt) {
+            if (columnToWrapAt < 0)
+            {
+                throw new ArgumentOutOfRangeException("columnToWrapAt","The wrap column value must be a positive integer.");
+            }
             throw new NotImplementedException();
         }
     }
