@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Runtime.Remoting;
 using System.Text;
+using Microsoft.SqlServer.Server;
 using NUnit.Framework;
 using Katas;
 
@@ -33,6 +35,19 @@ namespace Katas
 
             Assert.AreEqual(expectedResult,actualResult);
         }
+
+        [TestCase(0)]
+        [TestCase(1)]
+        [TestCase(10)]
+        public void Wrap_SuppliedWithBlankSpaces_ReturnsEmptyStringForAnyColumnValue(int columnNumber) {
+            var fourConsecutiveSpaces = new string(' ', 4);
+
+            var expectedResult = "";
+            var actualResult = Wrapper.Wrap(fourConsecutiveSpaces, columnNumber);
+
+            Assert.AreEqual(expectedResult,actualResult);
+        }
+
 
         /// <summary>
         /// The essense of this specification is that if the column number is set 
