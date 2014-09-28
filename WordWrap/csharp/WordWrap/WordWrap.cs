@@ -34,7 +34,10 @@ namespace Katas
                 return textToWrap;
             }
 
-            return textToWrap.TrimStart(' ');
+            string wrappedText = textToWrap.TrimStart(' ');
+            wrappedText = wrappedText.TrimEnd(' ');
+
+            return wrappedText;
         }
     }
 }
