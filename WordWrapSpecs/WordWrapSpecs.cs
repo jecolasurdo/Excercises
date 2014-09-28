@@ -178,5 +178,19 @@ namespace Katas
 
             Assert.AreEqual(expectedResult,actualResult);
         }
+
+        [Test]
+        public void Wrap_SuppliedTextContainsNewLineCharacters_ReplacesExistingNewLineCharactersWithSpacesAndReformats() {
+            var columnNumber = 25;
+            var aStringThatHasNewLinesAlreadyInIt =
+                "Lorem ipsum dolor sit amet, consectetur\nadipiscing elit. Aenean tempus sit\namet sem non sodales. Morbi id erat non dui\ncondimentum sodales et vel\nex.\n";
+
+            var expectedResult =
+                "Lorem ipsum dolor sit\namet, consectetur\nadipiscing elit. Aenean\ntempus sit amet sem non\nsodales. Morbi id erat\nnon dui condimentum\nsodales et vel ex.";
+
+            var actualResult = Wrapper.Wrap(aStringThatHasNewLinesAlreadyInIt, columnNumber);
+
+            Assert.AreEqual(expectedResult, actualResult);
+        }
     }
 }
