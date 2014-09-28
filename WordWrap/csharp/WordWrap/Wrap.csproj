@@ -7,8 +7,8 @@
     <ProjectGuid>{BF6718C9-8CF8-4741-A92D-D4C30F76C8F8}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WordWrap</RootNamespace>
-    <AssemblyName>WordWrap</AssemblyName>
+    <RootNamespace>Wrap</RootNamespace>
+    <AssemblyName>Wrap</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

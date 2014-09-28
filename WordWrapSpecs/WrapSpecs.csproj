@@ -7,7 +7,7 @@
     <ProjectGuid>{E49E23C8-667D-4F7B-A248-58BB009A2A20}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WordWrapSpecs</RootNamespace>
+    <RootNamespace>Katas</RootNamespace>
     <AssemblyName>WordWrapSpecs</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

@@ -58,10 +58,10 @@ namespace Katas
                 }
             }
 
-            if (wrappedText.EndsWith("\n"))
-            {
-                wrappedText = wrappedText.Substring(0, wrappedText.Length - 1);
-            }
+            //if (wrappedText.EndsWith("\n"))
+            //{
+            //    wrappedText = wrappedText.Substring(0, wrappedText.Length - 1);
+            //}
             return wrappedText.Trim();
         }
     }
