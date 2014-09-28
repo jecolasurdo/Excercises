@@ -111,7 +111,13 @@ namespace Katas
         /// </summary>
         [Test]
         public void Wrap_WithTrailingSpace_TruncatesTrailingSpace() {
-            Assert.Inconclusive();
+            var someColumnNumberThatWontInterfereWithTheTextValue = 100;
+            var aStringWithTrailingSpaces = "Hi Mom!     ";
+
+            var expectedResult = "Hi Mom!";
+            var actualResult = Wrapper.Wrap(aStringWithTrailingSpaces, someColumnNumberThatWontInterfereWithTheTextValue);
+
+            Assert.AreEqual(expectedResult, actualResult);
         }
 
         /// <summary>
