@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Runtime.Remoting;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using Microsoft.SqlServer.Server;
 using NUnit.Framework;
@@ -153,6 +154,20 @@ namespace Katas
             var actualResult = Wrapper.Wrap(aStringWithConsecutiveInternalSpaces, columnNumberThatFallsOnASpace);
 
             Assert.AreEqual(expectedResult, actualResult);
+        }
+
+        [Test]
+        public void Wrap_SuppliedTextRequiresMultipleBreaks_BreaksMultileLines() {
+            var columnNumber = 25;
+            var aStringThatRequiresMultipleBreaks =
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tempus sit amet sem non sodales. Morbi id erat non dui condimentum sodales et vel ex.";
+
+            var expectedResult =
+                "Lorem ipsum dolor sit\namet, consectetur\nadipiscing elit. Aenean\ntempus sit amet sem non\nsodales. Morbi id erat\nnon dui condimentum\nsodales et vel ex.";
+
+            var actualResult = Wrapper.Wrap(aStringThatRequiresMultipleBreaks, columnNumber);
+
+            Assert.AreEqual(expectedResult,actualResult);
         }
     }
 }
