@@ -47,12 +47,12 @@ namespace Katas
                 currentLineLength += s.Length;
                 if (currentLineLength > columnToWrapAt)
                 {
-                    wrappedText += "\n" + s;
+                    wrappedText += "\n" + s.TrimStart();
                     currentLineLength = 0;
                 }
                 else
                 {
-                    wrappedText += s + " ";
+                    wrappedText += s;
                 }
             }
 
