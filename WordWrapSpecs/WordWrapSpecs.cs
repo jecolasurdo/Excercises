@@ -15,7 +15,13 @@ namespace Katas
     {
         [Test]
         public void Wrap_StringIsEmpty_ReturnsEmptyString() {
-            Assert.Inconclusive();
+            var someColumnNumber = 10;
+            var emptyString = string.Empty;
+
+            var expectedResult = emptyString;
+            var actualResult = Wrapper.Wrap(String.Empty, someColumnNumber);
+
+            Assert.AreEqual(expectedResult, actualResult);
         }
 
         [Test]
