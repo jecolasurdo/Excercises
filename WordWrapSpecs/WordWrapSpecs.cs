@@ -112,7 +112,13 @@ namespace Katas
         /// </summary>
         [Test]
         public void Wrap_ConsecutiveSpacesMidString_ConsecutiveSpacesAreRespected() {
-            Assert.Inconclusive();
+            var columnNumber = 20;
+            var aStringWithConsecutiveInternalSpaces = "Lorem     ipsum dolor sit amet";
+
+            var expectedResult = "Lorem     ipsum\ndolor sit amet";
+            var actualResult = Wrapper.Wrap(aStringWithConsecutiveInternalSpaces, columnNumber);
+
+            Assert.AreEqual(expectedResult,actualResult);
         }
 
         /// <summary>
