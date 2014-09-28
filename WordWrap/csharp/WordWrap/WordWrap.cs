@@ -34,12 +34,31 @@ namespace Katas
                 return textToWrap;
             }
 
-            string wrappedText = textToWrap.TrimStart(' ');
-            wrappedText = wrappedText.TrimEnd(' ');
+            var trimmedText = textToWrap.TrimStart(' ');
+            trimmedText = trimmedText.TrimEnd(' ');
 
+            var splitText = trimmedText.Split(' ');
 
+            var wrappedText = "";
+            var currentLineLength = 0;
+            foreach (var s in splitText)
+            {
+                if (s.Length > columnToWrapAt)
+                {
+                    wrappedText += s + "\n";
+                    continue;
+                }
+                else
+                {
+                    wrappedText += s + " ";
+                }
+            }
 
-            return wrappedText;
+            if (wrappedText.EndsWith("\n"))
+            {
+                wrappedText = wrappedText.Substring(0, wrappedText.Length - 1);
+            }
+            return wrappedText.Trim();
         }
     }
 }
