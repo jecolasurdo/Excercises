@@ -34,7 +34,7 @@ namespace Katas
                 return textToWrap;
             }
 
-            throw new NotImplementedException();
+            return textToWrap.TrimStart(' ');
         }
     }
 }
