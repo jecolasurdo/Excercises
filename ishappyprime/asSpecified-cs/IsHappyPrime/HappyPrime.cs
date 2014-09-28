@@ -76,7 +76,7 @@ namespace Katas
             {
                 return false;
             }
-            
+
             var product = 0;
             while (true)
             {
@@ -90,10 +90,10 @@ namespace Katas
                     digitArray = ToDigitArray(product);
                     product = 0;
                 }
-                
+
                 foreach (var digit in digitArray)
                 {
-                    product = product + (int)(Math.Pow(digit,2));
+                    product = product + (int)(Math.Pow(digit, 2));
                 }
                 if (product == 1)
                 {
@@ -103,7 +103,7 @@ namespace Katas
                 if (product == 4)
                 {
                     return false;
-                }                
+                }
             }
         }
 

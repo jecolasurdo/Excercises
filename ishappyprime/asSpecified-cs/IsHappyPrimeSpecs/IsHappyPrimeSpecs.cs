@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Security.Cryptography.X509Certificates;
 using NUnit.Framework;
 
 namespace Katas
@@ -141,6 +142,5 @@ namespace Katas
             var aNegativeInteger = -1234;
             Assert.Throws<NotImplementedException>(() => hp.ToDigitArray(aNegativeInteger));
         }
-
     }
 }
