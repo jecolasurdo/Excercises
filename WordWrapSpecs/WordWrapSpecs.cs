@@ -83,7 +83,13 @@ namespace Katas
 
         [Test]
         public void Wrap_TextContainsLeadingSpaces_TruncatesLeadingSpaces() {
-            Assert.Inconclusive();
+            var someColumnNumberThatWontInterfereWithTheTextValue = 100;
+            var aStringWithLeadingSpaces = "    Hi Mom!";
+
+            var expectedResult = "Hi Mom!";
+            var actualResult = Wrapper.Wrap(aStringWithLeadingSpaces, someColumnNumberThatWontInterfereWithTheTextValue);
+
+            Assert.AreEqual(expectedResult,actualResult);
         }
 
         /// <summary>
