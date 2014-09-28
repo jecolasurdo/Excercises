@@ -12,11 +12,6 @@ namespace Katas
     public class WrapSpecs
     {
         [Test]
-        public void Wrap_Normally_ReturnsWithoutExecption() {
-            Assert.Inconclusive();
-        }
-
-        [Test]
         public void Wrap_StringIsEmpty_ReturnsEmptyString() {
             Assert.Inconclusive();
         }
