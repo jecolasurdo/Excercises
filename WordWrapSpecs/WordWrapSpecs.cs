@@ -150,12 +150,21 @@ namespace Katas
             var columnNumberThatFallsOnASpace = 12;
             var aStringWithConsecutiveInternalSpaces = "Lorem ipsum     dolor sit amet";
 
-            var expectedResult = "Lorem ipsum\ndolor sit amet";
+            var expectedResult = "Lorem ipsum\ndolor sit\namet";
             var actualResult = Wrapper.Wrap(aStringWithConsecutiveInternalSpaces, columnNumberThatFallsOnASpace);
 
             Assert.AreEqual(expectedResult, actualResult);
         }
 
+        //0000000001111111111222222
+        //1234567890123456789012345
+        //Lorem ipsum dolor sit
+        //amet, consectetur 
+        //adipiscing elit. Aenean
+        //tempus sit amet sem non
+        //sodales. Morbi id erat 
+        //non dui condimentum 
+        //sodales et vel ex.
         [Test]
         public void Wrap_SuppliedTextRequiresMultipleBreaks_BreaksMultileLines() {
             var columnNumber = 25;

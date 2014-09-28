@@ -45,10 +45,10 @@ namespace Katas
             foreach (var s in splitText)
             {
                 currentLineLength += s.Length;
-                if (currentLineLength > columnToWrapAt)
+                if (currentLineLength >= columnToWrapAt)
                 {
                     wrappedText += "\n" + s.TrimStart();
-                    currentLineLength = 0;
+                    currentLineLength = s.TrimStart().Length;
                 }
                 else
                 {
