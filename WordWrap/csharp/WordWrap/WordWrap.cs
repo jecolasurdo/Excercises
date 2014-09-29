@@ -16,9 +16,6 @@ namespace Katas
         /// <returns>
         /// Returns the wrapped text.
         /// </returns>
-        /// <remarks>
-        /// 
-        /// </remarks>
         public static string Wrap(string textToWrap, int columnToWrapAt) {
             if (columnToWrapAt < 0)
             {

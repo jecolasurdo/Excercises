@@ -33,7 +33,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "csharp", "csharp", "{593E52
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wrap", "WordWrap\csharp\WordWrap\Wrap.csproj", "{BF6718C9-8CF8-4741-A92D-D4C30F76C8F8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WrapSpecs", "WordWrapSpecs\WrapSpecs.csproj", "{E49E23C8-667D-4F7B-A248-58BB009A2A20}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WrapSpecs", "WordWrap\csharp\WordWrapSpecs\WrapSpecs.csproj", "{E49E23C8-667D-4F7B-A248-58BB009A2A20}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
