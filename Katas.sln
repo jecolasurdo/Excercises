@@ -43,6 +43,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "getLongestString", "getLong
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "csharp", "csharp", "{E6C414EE-A1E8-436B-B5FA-83706A2DB97D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "getLongestStringSpecs", "getLongestString\csharp\getLongestStringSpecs\getLongestStringSpecs.csproj", "{105571C0-6F0A-4A53-B976-B4658E5A61B1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -73,6 +75,10 @@ Global
 		{E49E23C8-667D-4F7B-A248-58BB009A2A20}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E49E23C8-667D-4F7B-A248-58BB009A2A20}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E49E23C8-667D-4F7B-A248-58BB009A2A20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{105571C0-6F0A-4A53-B976-B4658E5A61B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{105571C0-6F0A-4A53-B976-B4658E5A61B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{105571C0-6F0A-4A53-B976-B4658E5A61B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{105571C0-6F0A-4A53-B976-B4658E5A61B1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -89,5 +95,6 @@ Global
 		{E49E23C8-667D-4F7B-A248-58BB009A2A20} = {593E52CA-7453-45AD-B276-B563769F05B3}
 		{0BB9A474-7D16-42A6-9ED2-2A8A8BA4DB7A} = {FDC77AB1-B8DE-4CA8-9965-46C5D67BAED7}
 		{E6C414EE-A1E8-436B-B5FA-83706A2DB97D} = {D378F840-658F-4B25-B3DE-B26038A38027}
+		{105571C0-6F0A-4A53-B976-B4658E5A61B1} = {E6C414EE-A1E8-436B-B5FA-83706A2DB97D}
 	EndGlobalSection
 EndGlobal
