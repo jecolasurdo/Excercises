@@ -30,7 +30,14 @@ namespace Katas
 
         [Category("Nth Arg Specs")]
         [Test]
-        public void GetLongestString_GivenNumberGreaterThanListLength_ReturnsLongestWord() {
+        public void GetLongestString_GivenNumberGreaterThanListLength_ReturnsShortestWord() {
+            Assert.Inconclusive();
+        }
+
+        [Category("Nth Arg Specs")]
+        [Test]
+        public void GetLongestString_GivenOne_ReturnsLongestWord()
+        {
             Assert.Inconclusive();
         }
 

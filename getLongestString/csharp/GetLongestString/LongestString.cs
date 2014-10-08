@@ -14,10 +14,11 @@ namespace Katas
         /// <summary>
         /// Given a collection of strings, determines the nTh longest string in the list.
         /// </summary>
-        /// <param name="nTh">The ordinal you are seeking.
+        /// <param name="nTh">The ordinal you are seeking where 1 is the longest word in the list.
         /// Non-zero based
         /// Must be a positive integer
-        /// If given number is greater than list length, the longest word in the list is returned.
+        /// If given number is greater than list length, the shortest word in the list is returned.
+        /// If multiple words in the list are the same length, the word that appears first in the list is returned.
         /// </param>
         /// <param name="inputs">The list of strings to search.
         /// Null or empty list throws exception.
