@@ -43,9 +43,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "getLongestString", "getLong
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "csharp", "csharp", "{E6C414EE-A1E8-436B-B5FA-83706A2DB97D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "getLongestStringSpecs", "getLongestString\csharp\getLongestStringSpecs\getLongestStringSpecs.csproj", "{105571C0-6F0A-4A53-B976-B4658E5A61B1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LongestStringSpecs", "getLongestString\csharp\getLongestStringSpecs\LongestStringSpecs.csproj", "{105571C0-6F0A-4A53-B976-B4658E5A61B1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetLongestString", "getLongestString\csharp\GetLongestString\GetLongestString.csproj", "{CB6F3EF3-7BDA-4DDB-A8D9-7D8373A86BCA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LongestString", "getLongestString\csharp\GetLongestString\LongestString.csproj", "{CB6F3EF3-7BDA-4DDB-A8D9-7D8373A86BCA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
