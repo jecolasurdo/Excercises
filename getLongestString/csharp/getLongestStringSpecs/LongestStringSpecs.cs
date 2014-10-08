@@ -74,7 +74,13 @@ namespace Katas
         [Category("Nth Arg Specs")]
         [Test]
         public void GetLongestString_ItemsWithNLengthInMultiplePositions_ReturnsItemClosestToHeadOfList() {
-            Assert.Inconclusive();
+            var ls = new LongestString();
+            var positionOfStringThatHasPartnersOfSameLength = 4;
+
+            var expectedResult = "Interview";
+            var actualResult = ls.GetNthLongestString(positionOfStringThatHasPartnersOfSameLength, TestInputList);
+
+            Assert.AreEqual(expectedResult, actualResult);
         }
 
         [Category("List Specs")]
