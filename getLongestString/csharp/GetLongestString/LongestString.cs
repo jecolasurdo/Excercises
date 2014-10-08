@@ -32,11 +32,12 @@ namespace Katas
         ///    nTh = 1 > would return "This code puzzle is easy"
         /// </example>
         /// <remarks>
+        /// I renamed the method from GetLongestString to GetNthLongestString so that the method's intent is more clear.
         /// In the original spec the stubbed method is declared with private scope. To ease testing, I exposed the method as public, but this can be changed if desired.
         /// I camal cased the method name here, but that's stylistic and can be changed to conform to other standards.
         /// I took some liberties with the specifications on this. These could be nailed down more concretely with just a little analysis work.
         /// </remarks>
-        public string GetLongestString(int nTh, List<string> inputs) {
+        public string GetNthLongestString(int nTh, List<string> inputs) {
             throw new NotImplementedException();
         }
     }

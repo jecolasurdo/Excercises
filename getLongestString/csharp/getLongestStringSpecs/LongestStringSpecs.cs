@@ -4,16 +4,35 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using NUnit.Framework;
+using NUnit.Framework.Constraints;
 
 namespace Katas
 {
     [TestFixture]
     public class LongestStringSpecs
     {
+        public List<string> TestInputList = new List<string>
+        {
+            "Yuri",
+            "Interview",
+            "Nordstrom",
+            "Cat",
+            "Dog",
+            "Telephone",
+            "AVeryLongString",
+            "This code puzzle is easy"
+        };
+
         [Category("General")]
         [Test]
         public void GetLongestString_Normally_ReturnsTheLongestString() {
-            Assert.Inconclusive();
+            var ls = new LongestString();
+            var positionOfLongestString = 1;
+
+            var expectedResult = "This code puzzle is easy";
+            var actualResult = ls.GetNthLongestString(positionOfLongestString, TestInputList);
+
+            Assert.AreEqual(expectedResult, actualResult);
         }
 
         [Category("Nth Arg Specs")]
