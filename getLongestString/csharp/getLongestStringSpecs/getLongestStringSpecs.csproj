@@ -45,6 +45,12 @@
     <Compile Include="GetLongestStringSpecs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GetLongestString\GetLongestString.csproj">
+      <Project>{cb6f3ef3-7bda-4ddb-a8d9-7d8373a86bca}</Project>
+      <Name>GetLongestString</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
