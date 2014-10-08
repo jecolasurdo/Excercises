@@ -36,9 +36,16 @@ namespace Katas
         /// In the original spec the stubbed method is declared with private scope. To ease testing, I exposed the method as public, but this can be changed if desired.
         /// I camal cased the method name here, but that's stylistic and can be changed to conform to other standards.
         /// I took some liberties with the specifications on this. These could be nailed down more concretely with just a little analysis work.
+        /// There is more than one way to skin this cat. The method I chose is probably not the most elegant, but is the easiest to understand.
+        /// I generally try to start there then make the method more elegant and efficient as required by its implementation.
         /// </remarks>
         public string GetNthLongestString(int nTh, List<string> inputs) {
-            throw new NotImplementedException();
+            var sortedList = inputs;
+            sortedList.Sort((a,b)=>b.Length-a.Length);
+            var lengthOfNthItem = sortedList.ElementAt(nTh - 1).Length;
+            var distinct = inputs.Distinct().ToList();
+            var itemsOfSameLength = distinct.FindAll((i) => i.Length == lengthOfNthItem);
+            return itemsOfSameLength.First();
         }
     }
 }
