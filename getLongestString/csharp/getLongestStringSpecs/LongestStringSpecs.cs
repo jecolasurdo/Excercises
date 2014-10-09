@@ -59,7 +59,9 @@ namespace Katas
         [Category("Nth Arg Specs")]
         [Test]
         public void GetLongestString_GivenNegative_ThrowsInvalidArgumentException() {
-            Assert.Inconclusive();
+            var ls = new LongestString();
+            var invalidNthValue = -1;
+            Assert.Throws<ArgumentException>(() => ls.GetNthLongestString(invalidNthValue, TestInputList));
         }
 
         [Category("Nth Arg Specs")]
