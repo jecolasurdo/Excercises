@@ -40,6 +40,10 @@ namespace Katas
         /// I generally try to start there then make the method more elegant and efficient as required by its implementation.
         /// </remarks>
         public string GetNthLongestString(int nTh, List<string> inputs) {
+            if (nTh > inputs.Count)
+            {
+                nTh = inputs.Count;
+            }
             var sortedList = inputs;
             sortedList.Sort((a,b)=>b.Length-a.Length);
             var lengthOfNthItem = sortedList.ElementAt(nTh - 1).Length;
