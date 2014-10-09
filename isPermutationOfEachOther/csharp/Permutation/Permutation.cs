@@ -8,7 +8,7 @@ namespace Katas
     public class Permutation
     {
         /// <summary>
-        /// Given two input strings, this function determines if two strings are permutations of each other.
+        /// Given two input strings, this function determines if the strings are permutations of each other.
         /// </summary>
         /// <param name="input1">The first string to consider.</param>
         /// <param name="input2">The second string to consider.</param>
@@ -17,7 +17,12 @@ namespace Katas
         /// <para>Returns false if the strigs are not permutations of each other.</para>
         /// </returns>
         /// <remarks>
-        /// In the original spec, this method was proposed with private scope. I have made the metho public to ease testing, but this could be changed.
+        /// <para>In the original spec, this method was proposed with private scope. 
+        /// I have made the method public to ease testing, but this could be changed.</para>
+        /// <para>This implementation only considers full permutations, 
+        /// therefor if the length of each input string do not match, and the distinct character 
+        /// count of each input string do not match, false is returned.</para>
+        /// <para>Nulls are regarded as non-permutable, and result in a nullargumentexception.</para>
         /// </remarks>
         public bool IsPermutationOfEachOther(string input1, string input2){
 	        throw new NotImplementedException();
