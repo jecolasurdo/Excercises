@@ -47,6 +47,11 @@ namespace Katas
         }
 
         [Test]
+        public void IsPermutation_Normally_IsCaseSensitive() {
+            Assert.Inconclusive();
+        }
+
+        [Test]
         public void IsPermutation_GivenTwoEmptyStrings_ReturnsTrue() {
             Assert.Inconclusive();
         }

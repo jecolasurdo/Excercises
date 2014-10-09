@@ -22,11 +22,15 @@ namespace Katas
         /// <para>This implementation only considers full, bi-directional (commutative) permutations, 
         /// therefor if the length of each input string do not match, false is returned.</para>
         /// <para>Nulls are regarded as non-permutable, and result in a nullargumentexception.</para>
+        /// <para>This method is case sensitive/</para>
         /// </remarks>
         public bool IsPermutationOfEachOther(string input1, string input2) {
-            var hashSet1 = new HashSet<char>(input1.ToCharArray());
-            var hashSet2 = new HashSet<char>(input2.ToCharArray());
-            return hashSet1.SequenceEqual(hashSet2);
+            var comparer = StringComparer.InvariantCulture;
+            var list1 = input1.Select(c => c.ToString()).ToList();
+            var list2 = input2.Select(c => c.ToString()).ToList();
+            list1.Sort(comparer);
+            list2.Sort(comparer);
+            return list1.SequenceEqual(list2, comparer);
         }
 	
     }
