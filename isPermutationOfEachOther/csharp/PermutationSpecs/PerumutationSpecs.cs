@@ -36,7 +36,14 @@ namespace Katas
 
         [Test]
         public void IsPermutation_Normally_IsCommutative() {
-            Assert.Inconclusive();
+            var input1 = "AABCDE";
+            var input2 = "EADBCA";
+            var p = new Permutation();
+
+            var actualResult = p.IsPermutationOfEachOther(input2, input1) == p.IsPermutationOfEachOther(input1, input2);
+            var expectedResult = true;
+
+            Assert.AreEqual(actualResult, actualResult);
         }
 
         [Test]
