@@ -51,7 +51,9 @@ namespace Katas
         [Category("Nth Arg Specs")]
         [Test]
         public void GetLongestString_GivenZero_ThrowsInvalidArgumentException() {
-            Assert.Inconclusive();
+            var ls = new LongestString();
+            var invalidNthValue = 0;
+            Assert.Throws<ArgumentException>(() => ls.GetNthLongestString(invalidNthValue, TestInputList));
         }
 
         [Category("Nth Arg Specs")]
@@ -71,7 +73,7 @@ namespace Katas
 
             Assert.AreEqual(expectedResult, actualResult);
         }
-6
+
         /// <summary>
         /// Assuming the following list:
         /// {"TT","FFFFF","SSSSSSS","GGGGG","IIIIII"}
