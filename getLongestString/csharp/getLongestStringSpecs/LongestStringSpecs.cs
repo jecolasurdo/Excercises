@@ -72,12 +72,12 @@ namespace Katas
         /// not be a safe assumption.
         /// </summary>
         [Category("Nth Arg Specs")]
-        [Test]
-        public void GetLongestString_ItemsWithNLengthInMultiplePositions_ReturnsItemClosestToHeadOfList() {
+        [TestCase(4,"Interview")]
+        [TestCase(8,"Cat")]
+        public void GetLongestString_ItemsWithNLengthInMultiplePositions_ReturnsItemClosestToHeadOfList(int positionOfStringThatHasPartnersOfSameLength, string expectedResult)
+        {
             var ls = new LongestString();
-            var positionOfStringThatHasPartnersOfSameLength = 4;
 
-            var expectedResult = "Interview";
             var actualResult = ls.GetNthLongestString(positionOfStringThatHasPartnersOfSameLength, TestInputList);
 
             Assert.AreEqual(expectedResult, actualResult);
