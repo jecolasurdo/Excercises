@@ -93,16 +93,17 @@ namespace Katas
         public void GetLongestString_ItemsWithNLengthInMultiplePositions_ReturnsItemClosestToHeadOfList(int positionOfStringThatHasPartnersOfSameLength, string expectedResult)
         {
             var ls = new LongestString();
-
             var actualResult = ls.GetNthLongestString(positionOfStringThatHasPartnersOfSameLength, TestInputList);
-
             Assert.AreEqual(expectedResult, actualResult);
         }
 
         [Category("List Specs")]
         [Test]
         public void GetLongestString_ListIsEmpty_ThrowsInvalidArgumentException() {
-            Assert.Inconclusive();
+            var ls = new LongestString();
+            var anEmptyList = new List<string>();
+            var aValidNthValue = 1;
+            Assert.Throws<ArgumentException>(() => ls.GetNthLongestString(aValidNthValue, anEmptyList));
         }
 
         [Category("List Specs")]
