@@ -108,8 +108,11 @@ namespace Katas
 
         [Category("List Specs")]
         [Test]
-        public void GetShortestString_ListIsNull_ThrowsInvalidArgumentException() {
-            Assert.Inconclusive();
+        public void GetShortestString_ListIsNull_ThrowsNullReferenceException() {
+            var ls = new LongestString();
+            List<string> aNullList = null;
+            var aValidNthValue = 1;
+            Assert.Throws<NullReferenceException>(() => ls.GetNthLongestString(aValidNthValue, aNullList));
         }
     }
 }
