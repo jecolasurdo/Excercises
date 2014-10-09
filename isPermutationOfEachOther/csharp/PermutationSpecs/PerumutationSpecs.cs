@@ -89,12 +89,13 @@ namespace Katas
             Assert.AreEqual(expectedResult, actualResult);
         }
 
-        [TestCase]
-        [TestCase]
-        [TestCase]
+        [TestCase(null,null)]
+        [TestCase(null,"ABCDE")]
+        [TestCase("ABCDE",null)]
         public void IsPermutation_GivenNullsInAnyPosition_ThrowsNullArgumentException(string inputA, string inputB)
         {
-            Assert.Inconclusive();
+            var p = new Permutation();
+            Assert.Throws<ArgumentNullException>(()=> p.IsPermutationOfEachOther(inputA, inputB));
         }
     }
 }
