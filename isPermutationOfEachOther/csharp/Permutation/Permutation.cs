@@ -22,7 +22,7 @@ namespace Katas
         /// <para>This implementation only considers full, bi-directional (commutative) permutations, 
         /// therefor if the length of each input string do not match, false is returned.</para>
         /// <para>Nulls are regarded as non-permutable, and result in a nullargumentexception.</para>
-        /// <para>This method is case sensitive/</para>
+        /// <para>This method is case sensitive.</para>
         /// </remarks>
         public bool IsPermutationOfEachOther(string input1, string input2) {
             var comparer = StringComparer.Ordinal;
