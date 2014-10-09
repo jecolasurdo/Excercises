@@ -56,7 +56,14 @@ namespace Katas
 
         [Test]
         public void IsPermutation_GivenTwoEmptyStrings_ReturnsTrue() {
-            Assert.Inconclusive();
+            var input1 = String.Empty;
+            var input2 = String.Empty;
+            var p = new Permutation();
+
+            var actualResult = p.IsPermutationOfEachOther(input1, input2);
+            var expectedResult = true;
+
+            Assert.AreEqual(expectedResult, actualResult);
         }
 
         [Test]
