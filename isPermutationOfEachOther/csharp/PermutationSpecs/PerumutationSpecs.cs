@@ -46,9 +46,12 @@ namespace Katas
             Assert.AreEqual(expectedResult, actualResult);
         }
 
-        [Test]
-        public void IsPermutation_Normally_IsCaseSensitive() {
-            Assert.Inconclusive();
+        [TestCase("AABCDE", "aABCDE", false)]
+        [TestCase("aABCDE", "aABCDE", true)]
+        public void IsPermutation_Normally_IsCaseSensitive(string input1,string input2, bool expectedResult) {
+            var p = new Permutation();
+            var actualResult = p.IsPermutationOfEachOther(input1, input2);
+            Assert.AreEqual(expectedResult, actualResult);
         }
 
         [Test]
