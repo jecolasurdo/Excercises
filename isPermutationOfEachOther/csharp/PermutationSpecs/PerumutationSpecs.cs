@@ -24,7 +24,14 @@ namespace Katas
 
         [Test]
         public void IsPermutation_GivenANonPermutedCouple_ReturnsFalse() {
-            Assert.Inconclusive();
+            var input1 = "AABCDE";
+            var input2 = "EEDBCA";
+            var p = new Permutation();
+
+            var actualResult = p.IsPermutationOfEachOther(input1, input2);
+            var expectedResult = false;
+
+            Assert.AreEqual(actualResult, actualResult);
         }
 
         [Test]
