@@ -35,6 +35,19 @@ namespace Katas
             Assert.AreEqual(expectedResult, actualResult);
         }
 
+        [Category("General")]
+        [Test]
+        public void GetLongestString_Normally_ReturnsTheSpecifiedPosition()
+        {
+            var ls = new LongestString();
+            var positionOfLongestString = 2;
+
+            var expectedResult = "AVeryLongString";
+            var actualResult = ls.GetNthLongestString(positionOfLongestString, TestInputList);
+
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+
         [Category("Nth Arg Specs")]
         [Test]
         public void GetLongestString_GivenZero_ThrowsInvalidArgumentException() {
