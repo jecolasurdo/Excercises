@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 
 namespace Katas
 {
@@ -40,6 +41,10 @@ namespace Katas
         /// I generally try to start there then make the method more elegant and efficient as required by its implementation.
         /// </remarks>
         public string GetNthLongestString(int nTh, List<string> inputs) {
+            if (nTh <= 0)
+            {
+                throw new ArgumentException("The value supplied for nTh must be greater than or equal to one.","nTh");
+            }
             if (nTh > inputs.Count)
             {
                 nTh = inputs.Count;
