@@ -12,11 +12,23 @@ namespace Katas
     {
         [Test]
         public void IsPermutation_GivenAPermutedCouple_ReturnsTrue() {
-            Assert.Inconclusive();
+            var input1 = "ABCDE";
+            var input2 = "EDBCA";
+            var p = new Permutation();
+
+            var actualResult = p.IsPermutationOfEachOther(input1, input2);
+            var expectedResult = true;
+
+            Assert.AreEqual(actualResult,actualResult);
         }
 
         [Test]
         public void IsPermutation_GivenANonPermutedCouple_ReturnsFalse() {
+            Assert.Inconclusive();
+        }
+
+        [Test]
+        public void IsPermutation_Normally_IsCommutative() {
             Assert.Inconclusive();
         }
 
