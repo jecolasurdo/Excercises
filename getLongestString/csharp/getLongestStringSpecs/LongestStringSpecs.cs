@@ -63,7 +63,13 @@ namespace Katas
         [Category("Nth Arg Specs")]
         [Test]
         public void GetLongestString_GivenNumberGreaterThanListLength_ReturnsShortestWord() {
-            Assert.Inconclusive();
+            var ls = new LongestString();
+            var positionGreaterThanListLength = 20;
+
+            var expectedResult = "Cat";
+            var actualResult = ls.GetNthLongestString(positionGreaterThanListLength, TestInputList);
+
+            Assert.AreEqual(expectedResult, actualResult);
         }
 
         [Category("Nth Arg Specs")]
