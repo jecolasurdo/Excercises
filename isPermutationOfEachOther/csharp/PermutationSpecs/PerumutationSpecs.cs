@@ -12,8 +12,8 @@ namespace Katas
     {
         [Test]
         public void IsPermutation_GivenAPermutedCouple_ReturnsTrue() {
-            var input1 = "ABCDE";
-            var input2 = "EDBCA";
+            var input1 = "AABCDE";
+            var input2 = "EADBCA";
             var p = new Permutation();
 
             var actualResult = p.IsPermutationOfEachOther(input1, input2);

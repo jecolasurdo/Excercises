@@ -23,9 +23,11 @@ namespace Katas
         /// therefor if the length of each input string do not match, false is returned.</para>
         /// <para>Nulls are regarded as non-permutable, and result in a nullargumentexception.</para>
         /// </remarks>
-        public bool IsPermutationOfEachOther(string input1, string input2){
-	        throw new NotImplementedException();
-	    }
+        public bool IsPermutationOfEachOther(string input1, string input2) {
+            var hashSet1 = new HashSet<char>(input1.ToCharArray());
+            var hashSet2 = new HashSet<char>(input2.ToCharArray());
+            return hashSet1.SequenceEqual(hashSet2);
+        }
 	
     }
 }
