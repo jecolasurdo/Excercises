@@ -25,7 +25,7 @@ namespace Katas
         /// <para>This method is case sensitive/</para>
         /// </remarks>
         public bool IsPermutationOfEachOther(string input1, string input2) {
-            var comparer = StringComparer.InvariantCulture;
+            var comparer = StringComparer.Ordinal;
             var list1 = input1.Select(c => c.ToString()).ToList();
             var list2 = input2.Select(c => c.ToString()).ToList();
             list1.Sort(comparer);
