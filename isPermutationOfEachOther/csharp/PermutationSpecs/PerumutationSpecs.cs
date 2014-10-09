@@ -71,10 +71,15 @@ namespace Katas
             Assert.AreEqual(expectedResult, actualResult);
         }
 
-        [TestCase]
-        [TestCase]
+        [TestCase("","ABCDE")]
+        [TestCase("ABCDE","")]
         public void IsPermutation_GivenOneEmptyAndOneNonEmptyString_ReturnsFalse(string inputA, string inputB) {
-            Assert.Inconclusive();
+            var p = new Permutation();
+
+            var actualResult = p.IsPermutationOfEachOther(inputA, inputB);
+            var expectedResult = false;
+
+            Assert.AreEqual(expectedResult, actualResult);
         }
 
         [TestCase]
