@@ -71,14 +71,7 @@ namespace Katas
 
             Assert.AreEqual(expectedResult, actualResult);
         }
-
-        [Category("Nth Arg Specs")]
-        [Test]
-        public void GetLongestString_GivenOne_ReturnsLongestWord()
-        {
-            Assert.Inconclusive();
-        }
-
+6
         /// <summary>
         /// Assuming the following list:
         /// {"TT","FFFFF","SSSSSSS","GGGGG","IIIIII"}
