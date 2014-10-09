@@ -19,7 +19,7 @@ namespace Katas
             var actualResult = p.IsPermutationOfEachOther(input1, input2);
             var expectedResult = true;
 
-            Assert.AreEqual(actualResult,actualResult);
+            Assert.AreEqual(expectedResult, actualResult);
         }
 
         [Test]
@@ -31,7 +31,7 @@ namespace Katas
             var actualResult = p.IsPermutationOfEachOther(input1, input2);
             var expectedResult = false;
 
-            Assert.AreEqual(actualResult, actualResult);
+            Assert.AreEqual(expectedResult, actualResult);
         }
 
         [Test]
@@ -43,7 +43,7 @@ namespace Katas
             var actualResult = p.IsPermutationOfEachOther(input2, input1) == p.IsPermutationOfEachOther(input1, input2);
             var expectedResult = true;
 
-            Assert.AreEqual(actualResult, actualResult);
+            Assert.AreEqual(expectedResult, actualResult);
         }
 
         [Test]
