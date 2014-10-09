@@ -49,6 +49,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LongestString", "getLongest
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PermutationSpecs", "isPermutationOfEachOther\csharp\PermutationSpecs\PermutationSpecs.csproj", "{D8B2722C-BAF3-4E94-A8C0-52D576B1EFEA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Permutation", "isPermutationOfEachOther\csharp\Permutation\Permutation.csproj", "{1155EF17-09FC-442F-95EA-405901648A70}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -91,6 +93,10 @@ Global
 		{D8B2722C-BAF3-4E94-A8C0-52D576B1EFEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D8B2722C-BAF3-4E94-A8C0-52D576B1EFEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D8B2722C-BAF3-4E94-A8C0-52D576B1EFEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1155EF17-09FC-442F-95EA-405901648A70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1155EF17-09FC-442F-95EA-405901648A70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1155EF17-09FC-442F-95EA-405901648A70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1155EF17-09FC-442F-95EA-405901648A70}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -110,5 +116,6 @@ Global
 		{105571C0-6F0A-4A53-B976-B4658E5A61B1} = {E6C414EE-A1E8-436B-B5FA-83706A2DB97D}
 		{CB6F3EF3-7BDA-4DDB-A8D9-7D8373A86BCA} = {E6C414EE-A1E8-436B-B5FA-83706A2DB97D}
 		{D8B2722C-BAF3-4E94-A8C0-52D576B1EFEA} = {0BB9A474-7D16-42A6-9ED2-2A8A8BA4DB7A}
+		{1155EF17-09FC-442F-95EA-405901648A70} = {0BB9A474-7D16-42A6-9ED2-2A8A8BA4DB7A}
 	EndGlobalSection
 EndGlobal
