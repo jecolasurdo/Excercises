@@ -43,8 +43,14 @@ namespace Katas
         public string GetNthLongestString(int nTh, List<string> inputs) {
             if (nTh <= 0)
             {
-                throw new ArgumentException("The value supplied for nTh must be greater than or equal to one.","nTh");
+                throw new ArgumentException("The value supplied for nTh must be greater than or equal to one.","N");
             }
+
+            if (inputs.Count == 0)
+            {
+                throw new ArgumentException("The input list must not be empty.","inputs");
+            }
+
             if (nTh > inputs.Count)
             {
                 nTh = inputs.Count;
